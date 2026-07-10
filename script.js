@@ -396,7 +396,7 @@ cartItems.addEventListener("click", (event) => {
 });
 
 [searchInput, categorySelect, sortSelect].forEach((control) => control.addEventListener("input", renderProducts));
-document.querySelector("[data-open-cart]").addEventListener("click", openCart);
+document.querySelectorAll("[data-open-cart]").forEach((button) => button.addEventListener("click", openCart));
 document.querySelector("[data-close-cart]").addEventListener("click", closeCart);
 document.querySelector("[data-open-login]").addEventListener("click", openLogin);
 document.querySelector("[data-close-login]").addEventListener("click", closeLogin);
