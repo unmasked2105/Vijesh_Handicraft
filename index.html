@@ -25,6 +25,9 @@
           <a href="#reviews">Reviews</a>
           <a href="#contact">Contact</a>
         </div>
+        <button class="login-button" type="button" data-open-login>
+          Login
+        </button>
         <button class="cart-button" type="button" data-open-cart aria-label="Open cart">
           Cart <span data-cart-count>0</span>
         </button>
@@ -32,27 +35,27 @@
 
       <section class="hero">
         <div class="hero-copy">
-          <p class="eyebrow">Ethically sourced artisan marketplace</p>
-          <h1>Artifacts and handicrafts with a soul, shipped to your door.</h1>
+          <p class="eyebrow">Decorative handicrafts and gifting</p>
+          <h1>Premium brass, metal, glass, and decor pieces for beautiful homes.</h1>
           <p>
-            Discover hand-carved decor, woven textiles, pottery, jewelry, and meaningful gifts crafted by independent makers.
+            Shop brass products, wall clocks, polished statues, gold plated cabinets, glass candle stands, dry flower sticks, and more.
           </p>
           <div class="hero-actions">
             <a class="button primary" href="#shop">Start Shopping</a>
             <a class="button ghost" href="#story">Meet the Makers</a>
           </div>
           <div class="hero-stats" aria-label="Store highlights">
-            <span><strong>250+</strong> artisan pieces</span>
+            <span><strong>7+</strong> product lines</span>
             <span><strong>4.9/5</strong> customer rating</span>
-            <span><strong>7 days</strong> easy returns</span>
+            <span><strong>WhatsApp</strong> order support</span>
           </div>
         </div>
         <div class="hero-card" aria-label="Featured product">
-          <img src="https://images.unsplash.com/photo-1610701596061-2ecf227e85b2?auto=format&fit=crop&w=900&q=80" alt="Handmade ceramic bowls" />
+          <img src="https://images.unsplash.com/photo-1600421680010-0766ff230392?auto=format&fit=crop&w=900&q=80" alt="Decorative brass handicraft product" />
           <div>
-            <p>Featured Drop</p>
-            <h2>Blue Clay Table Set</h2>
-            <span>$89.00</span>
+            <p>Featured Collection</p>
+            <h2>Brass Decor Pieces</h2>
+            <span>From ₹1,499</span>
           </div>
         </div>
       </section>
@@ -81,13 +84,13 @@
         <div class="section-heading">
           <p class="eyebrow">Curated collection</p>
           <h2>Shop artifacts and handicrafts</h2>
-          <p>Filter by craft, search by keyword, and add your favorites to cart.</p>
+          <p>Choose size and color variations, then add your favorites to cart.</p>
         </div>
 
         <div class="shop-controls" aria-label="Product filters">
           <label>
             <span>Search</span>
-            <input type="search" data-search placeholder="Search pottery, brass, rug..." />
+            <input type="search" data-search placeholder="Search brass, clock, statue..." />
           </label>
           <label>
             <span>Category</span>
@@ -159,6 +162,21 @@
       </section>
     </main>
 
+    <aside class="login-drawer" data-login-drawer aria-hidden="true">
+      <div class="login-panel" role="dialog" aria-modal="true" aria-labelledby="login-title">
+        <div class="cart-header">
+          <h2 id="login-title">Login with WhatsApp</h2>
+          <button type="button" data-close-login aria-label="Close login">×</button>
+        </div>
+        <p class="login-copy">Enter your WhatsApp number to continue shopping and place orders.</p>
+        <form class="login-form" data-login-form>
+          <label>WhatsApp number<input name="whatsapp" type="tel" required placeholder="+91 98765 43210" /></label>
+          <button class="button primary full" type="submit">Continue</button>
+          <p class="form-note" data-login-note role="status"></p>
+        </form>
+      </div>
+    </aside>
+
     <aside class="cart-drawer" data-cart-drawer aria-hidden="true">
       <div class="cart-panel" role="dialog" aria-modal="true" aria-labelledby="cart-title">
         <div class="cart-header">
@@ -167,14 +185,14 @@
         </div>
         <div class="cart-items" data-cart-items></div>
         <div class="cart-summary">
-          <div><span>Subtotal</span><strong data-subtotal>$0.00</strong></div>
-          <div><span>Shipping</span><strong data-shipping>$0.00</strong></div>
-          <div><span>Total</span><strong data-total>$0.00</strong></div>
+          <div><span>Subtotal</span><strong data-subtotal>₹0</strong></div>
+          <div><span>Shipping</span><strong data-shipping>₹0</strong></div>
+          <div><span>Total</span><strong data-total>₹0</strong></div>
         </div>
         <form class="checkout-form" data-checkout-form>
           <h3>Checkout</h3>
           <label>Full name<input name="fullName" required placeholder="Full name" /></label>
-          <label>Email<input name="email" type="email" required placeholder="Email address" /></label>
+          <label>WhatsApp number<input name="whatsapp" type="tel" required placeholder="+91 98765 43210" data-checkout-whatsapp /></label>
           <label>Shipping address<textarea name="address" required placeholder="Street, city, state, ZIP"></textarea></label>
           <label>Payment method
             <select name="payment" required>
@@ -192,7 +210,7 @@
     <footer class="footer">
       <div>
         <a class="brand" href="#top"><span class="brand-mark">VH</span><span>Vijesh Handicraft</span></a>
-        <p>Artifacts, handicrafts, textiles, and gifts sourced with care.</p>
+        <p>Brass, metal, glass, polished statues, cabinets, clocks, and decor gifts sourced with care.</p>
       </div>
       <div>
         <strong>Deploy anywhere</strong>
