@@ -62,6 +62,15 @@ button, input, select, textarea { font: inherit; }
   cursor: pointer;
 }
 .cart-button span { margin-left: 0.35rem; color: #ffd89b; }
+.login-button {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.75rem 1rem;
+  color: var(--accent);
+  background: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  font-weight: 850;
+}
 
 .hero {
   display: grid;
@@ -167,6 +176,13 @@ input:focus, select:focus, textarea:focus { border-color: var(--brand); box-shad
 .product-meta { display: flex; justify-content: space-between; gap: 1rem; color: var(--muted); font-size: 0.9rem; }
 .product-card h3 { margin: 0.55rem 0 0.35rem; font-size: 1.1rem; }
 .product-card p { color: var(--muted); line-height: 1.55; min-height: 4.75rem; }
+.variant-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin: 0.85rem 0;
+}
+.variant-fields label { font-size: 0.86rem; }
 .product-footer { display: flex; align-items: center; justify-content: space-between; gap: 0.8rem; }
 .price { font-size: 1.2rem; font-weight: 950; }
 .add-button {
@@ -195,7 +211,7 @@ input:focus, select:focus, textarea:focus { border-color: var(--brand); box-shad
 .contact-form { padding: 1.2rem; }
 .form-note { margin: 0.8rem 0 0; color: var(--accent); font-weight: 800; min-height: 1.3rem; }
 
-.cart-drawer {
+.cart-drawer, .login-drawer {
   position: fixed;
   inset: 0;
   z-index: 50;
@@ -203,8 +219,8 @@ input:focus, select:focus, textarea:focus { border-color: var(--brand); box-shad
   justify-content: flex-end;
   background: rgba(47, 34, 24, 0.38);
 }
-.cart-drawer.open { display: flex; }
-.cart-panel {
+.cart-drawer.open, .login-drawer.open { display: flex; }
+.cart-panel, .login-panel {
   width: min(100%, 28rem);
   height: 100%;
   overflow: auto;
@@ -212,6 +228,9 @@ input:focus, select:focus, textarea:focus { border-color: var(--brand); box-shad
   background: var(--bg);
   box-shadow: var(--shadow);
 }
+.login-panel { height: auto; min-height: 20rem; align-self: flex-start; border-bottom-left-radius: 1.5rem; }
+.login-copy { color: var(--muted); line-height: 1.7; }
+.login-form { display: grid; gap: 1rem; }
 .cart-header { display: flex; justify-content: space-between; align-items: center; }
 .cart-header button, .qty button, .remove-button {
   border: 1px solid var(--line);
@@ -254,7 +273,9 @@ input:focus, select:focus, textarea:focus { border-color: var(--brand); box-shad
   .nav-links { display: none; width: 100%; flex-direction: column; padding: 0.5rem; }
   .nav-links.open { display: flex; }
   .cart-button { margin-left: auto; }
+  .login-button { margin-left: auto; }
   .hero { padding-top: 2rem; }
   .perks, .review-grid, .product-grid { grid-template-columns: 1fr; }
+  .variant-fields { grid-template-columns: 1fr; }
   .hero-card img, .story img { height: 20rem; }
 }
