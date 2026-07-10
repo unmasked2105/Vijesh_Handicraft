@@ -1,12 +1,15 @@
 # Vijesh Handicraft
 
-A fully functional static storefront for selling artifacts and handicrafts. It includes a responsive product catalog, search, category filters, sorting, cart, quantity controls, checkout form, contact form, and local order storage.
+A fully functional static storefront for selling Vijesh Handicraft products. It includes a responsive product catalog, search, category filters, size/color variations, rupee pricing, WhatsApp login, cart, quantity controls, checkout form, contact form, and local order storage.
 
 ## Features
 
 - Responsive landing page and storefront
-- Product catalog with categories, ratings, stock, origin, and prices
+- Product catalog for brass products, wall clocks, metal items, polished statues, gold plated cabinets, glass candle stands, and dry flower sticks
+- Size and color variations with separate prices and stock
+- Indian rupee pricing
 - Search, category filter, and sorting
+- WhatsApp number login before checkout
 - Persistent cart using `localStorage`
 - Checkout flow that stores demo orders in `localStorage`
 - Contact/custom order form UI
@@ -49,12 +52,15 @@ Edit the `products` array in `script.js`. Each product supports:
 {
   id: "unique-product-id",
   name: "Product Name",
-  category: "Pottery",
-  price: 89,
+  category: "Brass Products",
   rating: 4.9,
-  stock: 8,
-  origin: "Jaipur, India",
+  origin: "India",
   image: "https://...",
-  description: "Short product description"
+  description: "Short product description",
+  sizes: [
+    { label: "Small", price: 1499, stock: 12 },
+    { label: "Medium", price: 2499, stock: 9 }
+  ],
+  colors: ["Antique Brass", "Golden"]
 }
 ```
