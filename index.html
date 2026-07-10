@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A beautiful online marketplace for curated artifacts, handcrafted decor, textiles, jewelry, and gifts."
+    />
+    <title>Vijesh Handicraft | Artifacts & Handicrafts</title>
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" id="top">
+      <nav class="nav" aria-label="Primary navigation">
+        <a class="brand" href="#top" aria-label="Vijesh Handicraft home">
+          <span class="brand-mark">VH</span>
+          <span>Vijesh Handicraft</span>
+        </a>
+        <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">☰</button>
+        <div class="nav-links" data-nav-links>
+          <a href="#shop">Shop</a>
+          <a href="#story">Story</a>
+          <a href="#reviews">Reviews</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <button class="cart-button" type="button" data-open-cart aria-label="Open cart">
+          Cart <span data-cart-count>0</span>
+        </button>
+      </nav>
+
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Ethically sourced artisan marketplace</p>
+          <h1>Artifacts and handicrafts with a soul, shipped to your door.</h1>
+          <p>
+            Discover hand-carved decor, woven textiles, pottery, jewelry, and meaningful gifts crafted by independent makers.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#shop">Start Shopping</a>
+            <a class="button ghost" href="#story">Meet the Makers</a>
+          </div>
+          <div class="hero-stats" aria-label="Store highlights">
+            <span><strong>250+</strong> artisan pieces</span>
+            <span><strong>4.9/5</strong> customer rating</span>
+            <span><strong>7 days</strong> easy returns</span>
+          </div>
+        </div>
+        <div class="hero-card" aria-label="Featured product">
+          <img src="https://images.unsplash.com/photo-1610701596061-2ecf227e85b2?auto=format&fit=crop&w=900&q=80" alt="Handmade ceramic bowls" />
+          <div>
+            <p>Featured Drop</p>
+            <h2>Blue Clay Table Set</h2>
+            <span>$89.00</span>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section class="section perks" aria-label="Shopping benefits">
+        <article>
+          <span>✦</span>
+          <h3>Authentic Craft</h3>
+          <p>Every piece is selected for handwork, material quality, and cultural integrity.</p>
+        </article>
+        <article>
+          <span>↺</span>
+          <h3>Easy Returns</h3>
+          <p>Not the right fit? Request a return within seven days of delivery.</p>
+        </article>
+        <article>
+          <span>☘</span>
+          <h3>Fair Trade First</h3>
+          <p>We price transparently so artisans keep a meaningful share of each sale.</p>
+        </article>
+      </section>
+
+      <section class="section shop-section" id="shop">
+        <div class="section-heading">
+          <p class="eyebrow">Curated collection</p>
+          <h2>Shop artifacts and handicrafts</h2>
+          <p>Filter by craft, search by keyword, and add your favorites to cart.</p>
+        </div>
+
+        <div class="shop-controls" aria-label="Product filters">
+          <label>
+            <span>Search</span>
+            <input type="search" data-search placeholder="Search pottery, brass, rug..." />
+          </label>
+          <label>
+            <span>Category</span>
+            <select data-category>
+              <option value="all">All categories</option>
+            </select>
+          </label>
+          <label>
+            <span>Sort</span>
+            <select data-sort>
+              <option value="featured">Featured</option>
+              <option value="price-asc">Price: Low to High</option>
+              <option value="price-desc">Price: High to Low</option>
+              <option value="rating">Top Rated</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="product-grid" data-products></div>
+        <p class="empty-state" data-empty hidden>No products match your search yet.</p>
+      </section>
+
+      <section class="section story" id="story">
+        <div>
+          <p class="eyebrow">Our story</p>
+          <h2>Built for makers, collectors, and homes with character.</h2>
+          <p>
+            Vijesh Handicraft connects buyers with traditional craft communities and contemporary independent artisans. Each listing includes origin, material, care guidance, and limited-stock availability.
+          </p>
+          <a class="button primary" href="#contact">Partner With Us</a>
+        </div>
+        <img src="https://images.unsplash.com/photo-1452860606245-08befc0ff44b?auto=format&fit=crop&w=900&q=80" alt="Artisan weaving colorful textile" />
+      </section>
+
+      <section class="section reviews" id="reviews">
+        <div class="section-heading">
+          <p class="eyebrow">Loved by collectors</p>
+          <h2>Customer stories</h2>
+        </div>
+        <div class="review-grid">
+          <article>
+            <p>“The walnut mask arrived beautifully packed and looks even better than the photos.”</p>
+            <strong>— Maya R.</strong>
+          </article>
+          <article>
+            <p>“Checkout was simple, delivery updates were clear, and the textile quality is outstanding.”</p>
+            <strong>— Arun P.</strong>
+          </article>
+          <article>
+            <p>“I bought corporate gifts from here. Thoughtful, premium, and not generic at all.”</p>
+            <strong>— Lena K.</strong>
+          </article>
+        </div>
+      </section>
+
+      <section class="section contact" id="contact">
+        <div>
+          <p class="eyebrow">Need something special?</p>
+          <h2>Ask for custom orders, sourcing, or bulk gifting.</h2>
+          <p>Tell us what you need and we will respond with options, timelines, and pricing.</p>
+        </div>
+        <form class="contact-form" data-contact-form>
+          <label>Name<input name="name" required placeholder="Your name" /></label>
+          <label>Email<input name="email" type="email" required placeholder="you@example.com" /></label>
+          <label>Message<textarea name="message" required placeholder="What are you looking for?"></textarea></label>
+          <button class="button primary" type="submit">Send Request</button>
+          <p class="form-note" data-contact-note role="status"></p>
+        </form>
+      </section>
+    </main>
+
+    <aside class="cart-drawer" data-cart-drawer aria-hidden="true">
+      <div class="cart-panel" role="dialog" aria-modal="true" aria-labelledby="cart-title">
+        <div class="cart-header">
+          <h2 id="cart-title">Your Cart</h2>
+          <button type="button" data-close-cart aria-label="Close cart">×</button>
+        </div>
+        <div class="cart-items" data-cart-items></div>
+        <div class="cart-summary">
+          <div><span>Subtotal</span><strong data-subtotal>$0.00</strong></div>
+          <div><span>Shipping</span><strong data-shipping>$0.00</strong></div>
+          <div><span>Total</span><strong data-total>$0.00</strong></div>
+        </div>
+        <form class="checkout-form" data-checkout-form>
+          <h3>Checkout</h3>
+          <label>Full name<input name="fullName" required placeholder="Full name" /></label>
+          <label>Email<input name="email" type="email" required placeholder="Email address" /></label>
+          <label>Shipping address<textarea name="address" required placeholder="Street, city, state, ZIP"></textarea></label>
+          <label>Payment method
+            <select name="payment" required>
+              <option value="cod">Cash on delivery</option>
+              <option value="bank">Bank transfer</option>
+              <option value="stripe-demo">Stripe placeholder</option>
+            </select>
+          </label>
+          <button class="button primary full" type="submit">Place Order</button>
+          <p class="form-note" data-checkout-note role="status"></p>
+        </form>
+      </div>
+    </aside>
+
+    <footer class="footer">
+      <div>
+        <a class="brand" href="#top"><span class="brand-mark">VH</span><span>Vijesh Handicraft</span></a>
+        <p>Artifacts, handicrafts, textiles, and gifts sourced with care.</p>
+      </div>
+      <div>
+        <strong>Deploy anywhere</strong>
+        <p>Static HTML, CSS, and JavaScript. No build step required.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
